@@ -94,6 +94,12 @@ function App() {
 
       <section className="intro"><div className="container intro-inner"><span className="micro">NJË VEND PËR PUNIME TË NDRYSHME</span><p>Kur vjen koha për ta rregulluar një hapësirë, <strong>nisemi nga nevoja jote.</strong></p><a href="#sherbimet">Shiko shërbimet <b>↘</b></a></div></section>
 
+      <section className="stats-strip" aria-label="Niti Dekor në shifra"><div className="container stats-inner">
+        <div className="stat"><strong>3+</strong><span>punëtorë në ekip</span></div>
+        <div className="stat"><strong>7</strong><span>lloje shërbimesh</span></div>
+        <p>Një ekip për punime të brendshme dhe të jashtme.</p>
+      </div></section>
+
       <section className="section services" id="sherbimet"><div className="container">
         <div className="section-heading"><div><span className="label">ÇFARË BËJMË</span><h2>Puna që e sjell<br/>hapësirën në jetë.</h2></div><p>Shërbime të ndryshme për një projekt të ri apo për freskimin e ambientit ekzistues.</p></div>
         <div className="service-grid">{services.map((s,i) => <article className="service-card" key={s[0]}><div className="service-top"><span>0{i+1}</span><Icon type={s[2]}/></div><h3>{s[0]}</h3><p>{s[1]}</p><a href="#kerkesa" aria-label={'Kërko ofertë për ' + s[0]}>↗</a></article>)}</div>

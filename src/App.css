@@ -19,3 +19,5 @@
 
 
 
+
+.stats-strip{background:#eeece6;border-top:1px solid #e4e1d9;border-bottom:1px solid #e4e1d9}.stats-inner{min-height:106px;display:flex;align-items:center;gap:34px}.stat{display:flex;align-items:center;gap:10px}.stat strong{color:#d92536;font:700 29px/1 Manrope,sans-serif;letter-spacing:-.06em}.stat span{max-width:82px;color:#5f5c55;font-size:9px;line-height:1.5}.stats-inner>p{margin:0 0 0 auto;color:#77736c;font-size:10px}@media(max-width:700px){.stats-inner{min-height:82px;gap:16px}.stat{gap:6px}.stat strong{font-size:24px}.stat span{max-width:60px;font-size:8px}.stats-inner>p{max-width:92px;font-size:8px;line-height:1.5}}
