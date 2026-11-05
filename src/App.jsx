@@ -47,7 +47,7 @@ function App() {
   function sendRequest(event) {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    const selected = phones.find((p) => p.wa === data.get('contact')) || phones[0]
+    const selected = phones.find((p) => p.wa === data.get('contact')) || phones[1]
     const lines = [
       'Përshëndetje Niti Dekor, dua të kërkoj një ofertë për punë.',
       '',
@@ -139,7 +139,7 @@ function App() {
             <label>Sipërfaqja e përafërt<div className="unit-input"><input name="area" inputMode="decimal" placeholder="p.sh. 80"/><span>m²</span></div></label>
             <label>Kur dëshironi ta nisni?<select name="timing" defaultValue=""><option value="">Zgjidhni një mundësi</option><option>Sa më shpejt që të jetë e mundur</option><option>Brenda 1 muaji</option><option>Brenda 3 muajve</option><option>Jam duke planifikuar</option></select></label>
             <label className="full-field">Detaje shtesë<textarea name="notes" rows="3" placeholder="Përshkruani shkurt punën…"/></label>
-            <label className="full-field">Në cilin numër ta dërgojmë kërkesën? *<select name="contact" defaultValue={phones[0].wa}>{phones.map(p=><option key={p.wa} value={p.wa}>{p.label} · WhatsApp</option>)}</select></label>
+            <label className="full-field">Në cilin numër ta dërgojmë kërkesën? *<select name="contact" defaultValue={phones[1].wa}>{phones.map(p=><option key={p.wa} value={p.wa}>{p.label} · WhatsApp</option>)}</select></label>
           </div>
           <div className="form-foot"><p>Hapet një mesazh i gatshëm në WhatsApp. Dërgimin final e bën vetë në aplikacion.</p><button type="submit" className="button red-button"><WaIcon/> Dërgo kërkesën <b>↗</b></button></div>
           {sent && <p className="success" role="status">WhatsApp u hap me kërkesën e plotësuar. Kontrolloje mesazhin dhe shtyp “Dërgo”.</p>}
@@ -148,11 +148,11 @@ function App() {
 
       <section className="faq" id="pyetjet"><div className="container faq-grid"><div><span className="label">PYETJE TË SHPESHTA</span><h2>Para se<br/>të fillojmë.</h2><p>Nëse ke pyetje tjetër, na telefono ose na shkruaj.</p></div><div className="faq-list">{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary>{q}<i>+</i></summary><p>{a}</p></details>)}</div></div></section>
 
-      <section className="contact-banner"><div className="container banner-inner"><div><span className="label">HAPI I PARË ËSHTË I THJESHTË</span><h2>Ke një projekt<br/>në mendje?</h2><p>Na trego ku dhe çfarë pune të duhet.</p></div><div className="banner-actions"><a href="#kerkesa" className="button light-button">Plotëso kërkesën <b>↗</b></a><a href="https://wa.me/38344949053?text=P%C3%ABrsh%C3%ABndetje%20Niti%20Dekor%2C%20dua%20t%C3%AB%20diskutoj%20p%C3%ABr%20nj%C3%AB%20projekt." target="_blank" rel="noreferrer" className="button ghost-button"><WaIcon/> WhatsApp <b>↗</b></a></div><span className="banner-mark">N</span></div></section>
+      <section className="contact-banner"><div className="container banner-inner"><div><span className="label">HAPI I PARË ËSHTË I THJESHTË</span><h2>Ke një projekt<br/>në mendje?</h2><p>Na trego ku dhe çfarë pune të duhet.</p></div><div className="banner-actions"><a href="#kerkesa" className="button light-button">Plotëso kërkesën <b>↗</b></a><a href="https://wa.me/38343880989?text=P%C3%ABrsh%C3%ABndetje%20Niti%20Dekor%2C%20dua%20t%C3%AB%20diskutoj%20p%C3%ABr%20nj%C3%AB%20projekt." target="_blank" rel="noreferrer" className="button ghost-button"><WaIcon/> WhatsApp <b>↗</b></a></div><span className="banner-mark">N</span></div></section>
     </main>
 
     <footer className="footer"><div className="container footer-main"><div className="footer-about"><Logo/><p>Punime të brendshme dhe fasada për shtëpi e biznese në Prishtinë dhe rrethinë.</p></div><div className="footer-col"><b>SHËRBIMET</b><a href="#sherbimet">Punime të brendshme</a><a href="#sherbimet">Fasada dhe suvatim</a><a href="#sherbimet">Knauf dhe pllaka</a><a href="#cmimet">Si llogaritet çmimi</a></div><div className="footer-col"><b>KONTAKTO</b>{phones.map(p=><a className="footer-phone" href={'tel:' + p.tel} key={p.tel}>{p.label}</a>)}<a href="#kerkesa" className="footer-offer">Kërko ofertë ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Niti Dekor</span><span>Prishtinë, Kosovë</span><a href="#ballina">Kthehu lart ↑</a></div></footer>
-    <div className="mobile-bar"><a href="tel:+38344949053">☎ &nbsp;Telefono</a><a href="https://wa.me/38344949053?text=P%C3%ABrsh%C3%ABndetje%20Niti%20Dekor%2C%20dua%20t%C3%AB%20k%C3%ABrkoj%20nj%C3%AB%20ofert%C3%AB." target="_blank" rel="noreferrer"><WaIcon/> WhatsApp</a></div>
+    <div className="mobile-bar"><a href="tel:+38344949053">☎ &nbsp;Telefono</a><a href="https://wa.me/38343880989?text=P%C3%ABrsh%C3%ABndetje%20Niti%20Dekor%2C%20dua%20t%C3%AB%20k%C3%ABrkoj%20nj%C3%AB%20ofert%C3%AB." target="_blank" rel="noreferrer"><WaIcon/> WhatsApp</a></div>
   </>
 }
 export default App
