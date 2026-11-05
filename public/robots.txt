@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niti-dekor-podujeve.adonit-ha12.chatgpt.site/sitemap.xml
