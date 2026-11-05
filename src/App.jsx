@@ -22,7 +22,7 @@ const faqs = [
 ]
 function Logo() {
   return <a className="brand" href="#ballina" aria-label="Niti Dekor - ballina">
-    <img src="/niti-dekor-logo.png" alt="" width="1000" height="620"/>
+    <img src="/niti-dekor-logo.png" alt="" width="1107" height="722"/>
   </a>
 }
 function Icon({ type }) {
@@ -150,4 +150,5 @@ function App() {
   </>
 }
 export default App
+
 
