@@ -22,8 +22,7 @@ const faqs = [
 ]
 function Logo() {
   return <a className="brand" href="#ballina" aria-label="Niti Dekor - ballina">
-    <svg viewBox="0 0 54 48" aria-hidden="true"><path d="M5 26 26 8l22 18M12 25h30v17H12zM24 42V30h8v12" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinejoin="round"/><path d="M3 12 20 3" stroke="#df2635" strokeWidth="7" strokeLinecap="round"/><path d="m3 12 7 11" stroke="#fff" strokeWidth="2"/></svg>
-    <span><strong>NITI</strong><small>DEKOR</small></span>
+    <img src="/niti-dekor-logo.png" alt="" width="1000" height="620"/>
   </a>
 }
 function Icon({ type }) {
@@ -151,3 +150,4 @@ function App() {
   </>
 }
 export default App
+
