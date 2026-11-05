@@ -18,7 +18,7 @@ const faqs = [
   ['Kur bëhet matja?', 'Na tregoni shërbimin dhe lokacionin, ose na dërgoni fotografi në WhatsApp. Pastaj caktojmë bashkë një termin për matje në terren dhe e konfirmojmë kohën me telefon ose WhatsApp.'],
   ['Si llogaritet çmimi?', 'Çmimi varet nga sipërfaqja, gjendja dhe përgatitja e bazës, materiali dhe përfundimi, lartësia e objektit, qasja në hapësirë dhe kompleksiteti. Pas bisedës dhe matjes mund të përgatitet ofertë për projektin konkret.'],
   ['Po nëse nuk e di sipërfaqen?', 'Plotëso formularin me informacionin që ke. Fusha e sipërfaqes është opsionale; mund të dërgosh fotografi e detaje në WhatsApp.'],
-  ['Në cilat zona punoni?', 'Niti Dekor është në Podujevë dhe punon edhe në komunat përreth. Na trego vendndodhjen e projektit që ta konfirmojmë disponueshmërinë.'],
+  ['Në cilat zona punoni?', 'Niti Dekor është në Prishtinë dhe punon edhe në komunat përreth. Na trego vendndodhjen e projektit që ta konfirmojmë disponueshmërinë.'],
 ]
 function Logo() {
   return <a className="brand" href="#ballina" aria-label="Niti Dekor - ballina">
@@ -66,7 +66,7 @@ function App() {
     event.currentTarget.reset()
   }
   return <>
-    <div className="topbar"><div className="container topbar-inner"><span>PUNIME PËR SHTËPI DHE BIZNESE</span><span>● &nbsp;Podujevë · Komunat përreth</span></div></div>
+    <div className="topbar"><div className="container topbar-inner"><span>PUNIME PËR SHTËPI DHE BIZNESE</span><span>● &nbsp;Prishtinë · Komunat përreth</span></div></div>
     <header className="header"><div className="container header-inner">
       <Logo />
       <button className={'menu-toggle ' + (menuOpen ? 'open' : '')} onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Mbyll menynë' : 'Hap menynë'} aria-expanded={menuOpen}><i/><i/></button>
@@ -79,7 +79,7 @@ function App() {
     <main id="ballina">
       <section className="hero"><div className="container hero-grid">
         <div className="hero-copy">
-          <div className="eyebrow"><i/> NITI DEKOR · PODUJEVË</div>
+          <div className="eyebrow"><i/> NITI DEKOR · PRISHTINË</div>
           <h1>Hapësira jote,<br/><em>e punuar</em> me kujdes.</h1>
           <p className="hero-text">Nga përgatitja e mureve deri te përfundimi final — punime të brendshme dhe fasada për shtëpi e biznese.</p>
           <div className="hero-actions"><a className="button red-button" href="#kerkesa">Kërko ofertë <b>↗</b></a><a className="button line-button" href="tel:+38344949053">Telefono tani <b>↗</b></a></div>
@@ -145,7 +145,7 @@ function App() {
       <section className="contact-banner"><div className="container banner-inner"><div><span className="label">HAPI I PARË ËSHTË I THJESHTË</span><h2>Ke një projekt<br/>në mendje?</h2><p>Na trego ku dhe çfarë pune të duhet.</p></div><div className="banner-actions"><a href="#kerkesa" className="button light-button">Plotëso kërkesën <b>↗</b></a><a href="https://wa.me/38344949053?text=P%C3%ABrsh%C3%ABndetje%20Niti%20Dekor%2C%20dua%20t%C3%AB%20diskutoj%20p%C3%ABr%20nj%C3%AB%20projekt." target="_blank" rel="noreferrer" className="button ghost-button"><WaIcon/> WhatsApp <b>↗</b></a></div><span className="banner-mark">N</span></div></section>
     </main>
 
-    <footer className="footer"><div className="container footer-main"><div className="footer-about"><Logo/><p>Punime të brendshme dhe fasada për shtëpi e biznese në Podujevë dhe rrethinë.</p></div><div className="footer-col"><b>SHËRBIMET</b><a href="#sherbimet">Punime të brendshme</a><a href="#sherbimet">Fasada dhe suvatim</a><a href="#sherbimet">Knauf dhe pllaka</a><a href="#cmimet">Si llogaritet çmimi</a></div><div className="footer-col"><b>KONTAKTO</b>{phones.map(p=><a className="footer-phone" href={'tel:' + p.tel} key={p.tel}>{p.label}</a>)}<a href="#kerkesa" className="footer-offer">Kërko ofertë ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Niti Dekor</span><span>Podujevë, Kosovë</span><a href="#ballina">Kthehu lart ↑</a></div></footer>
+    <footer className="footer"><div className="container footer-main"><div className="footer-about"><Logo/><p>Punime të brendshme dhe fasada për shtëpi e biznese në Prishtinë dhe rrethinë.</p></div><div className="footer-col"><b>SHËRBIMET</b><a href="#sherbimet">Punime të brendshme</a><a href="#sherbimet">Fasada dhe suvatim</a><a href="#sherbimet">Knauf dhe pllaka</a><a href="#cmimet">Si llogaritet çmimi</a></div><div className="footer-col"><b>KONTAKTO</b>{phones.map(p=><a className="footer-phone" href={'tel:' + p.tel} key={p.tel}>{p.label}</a>)}<a href="#kerkesa" className="footer-offer">Kërko ofertë ↗</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Niti Dekor</span><span>Prishtinë, Kosovë</span><a href="#ballina">Kthehu lart ↑</a></div></footer>
     <div className="mobile-bar"><a href="tel:+38344949053">☎ &nbsp;Telefono</a><a href="https://wa.me/38344949053?text=P%C3%ABrsh%C3%ABndetje%20Niti%20Dekor%2C%20dua%20t%C3%AB%20k%C3%ABrkoj%20nj%C3%AB%20ofert%C3%AB." target="_blank" rel="noreferrer"><WaIcon/> WhatsApp</a></div>
   </>
 }

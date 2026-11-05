@@ -1,6 +1,6 @@
 # Niti Dekor website
 
-React + Vite website for Niti Dekor in Podujevë.
+React + Vite website for Niti Dekor in Prishtinë.
 
 ## Start locally
 
