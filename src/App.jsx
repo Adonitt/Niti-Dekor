@@ -37,17 +37,24 @@ function WaIcon() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [sent, setSent] = useState(false)
+  const [serviceError, setServiceError] = useState('')
   const closeMenu = () => setMenuOpen(false)
   function sendRequest(event) {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
+    const selectedServices = data.getAll('service')
+    if (!selectedServices.length) {
+      setServiceError('Zgjidh së paku një shërbim për të vazhduar.')
+      return
+    }
+    setServiceError('')
     const selected = phones.find((p) => p.wa === data.get('contact')) || phones[1]
     const lines = [
       'Përshëndetje Niti Dekor, dua të kërkoj një ofertë për punë.',
       '',
       'Emri: ' + data.get('name'),
       'Telefoni: ' + data.get('phone'),
-      'Shërbimi: ' + data.get('service'),
+      'Shërbimet: ' + selectedServices.join(', '),
       'Lokacioni: ' + data.get('location'),
       'Sipërfaqja e përafërt: ' + (data.get('area') || 'Nuk e di ende'),
       'Koha e dëshiruar: ' + (data.get('timing') || 'Për t’u dakorduar'),
@@ -128,7 +135,7 @@ function App() {
           <div className="fields">
             <label>Emri dhe mbiemri *<input name="name" autoComplete="name" placeholder="Si quheni?" required/></label>
             <label>Numri i telefonit *<input name="phone" type="tel" autoComplete="tel" placeholder="p.sh. 044 000 000" required/></label>
-            <label>Shërbimi që ju duhet *<select name="service" defaultValue="" required><option value="" disabled>Zgjidhni shërbimin</option>{services.map(s=><option key={s[0]}>{s[0]}</option>)}<option>Ende nuk jam i sigurt</option></select></label>
+            <fieldset className="service-checks full-field"><legend>Shërbimet që ju duhen * <small>(mund të zgjidhni disa)</small></legend><div className="service-check-grid">{services.map(s=><label className="service-check" key={s[0]}><input type="checkbox" name="service" value={s[0]} onChange={()=>setServiceError('')}/><span>{s[0]}</span></label>)}</div>{serviceError && <p className="service-error" role="alert">{serviceError}</p>}</fieldset>
             <label>Lokacioni i punës *<input name="location" placeholder="Komuna / vendbanimi" required/></label>
             <label>Sipërfaqja e përafërt<div className="unit-input"><input name="area" inputMode="decimal" placeholder="p.sh. 80"/><span>m²</span></div></label>
             <label>Kur dëshironi ta nisni?<select name="timing" defaultValue=""><option value="">Zgjidhni një mundësi</option><option>Sa më shpejt që të jetë e mundur</option><option>Brenda 1 muaji</option><option>Brenda 3 muajve</option><option>Jam duke planifikuar</option></select></label>
