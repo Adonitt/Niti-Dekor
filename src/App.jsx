@@ -96,8 +96,8 @@ function App() {
 
       <section className="stats-strip" aria-label="Niti Dekor në shifra"><div className="container stats-inner">
         <div className="stat"><strong>3+</strong><span>punëtorë në ekip</span></div>
-        <div className="stat"><strong>7</strong><span>lloje shërbimesh</span></div>
-        <p>Një ekip për punime të brendshme dhe të jashtme.</p>
+        <div className="stat"><strong>7+</strong><span>lloje shërbimesh</span></div>
+        <div className="stat"><strong>20+</strong><span>vite përvojë pune</span></div>
       </div></section>
 
       <section className="section services" id="sherbimet"><div className="container">
